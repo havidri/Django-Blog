@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body xmlns="http://www.w3.org/1999/html">
+    <h2>
+        Hasil Pencarian
+    </h2>
+    {% for result in queryset %}
+        <a href="{{result.get_absolute_url}}">{{result.title}}</a>
+        </br>
+    {% endfor %}
+</body>
+
+{% endblock content %}
